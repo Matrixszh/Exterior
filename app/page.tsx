@@ -15,7 +15,7 @@ const Page = () => {
         className="relative w-full flex flex-col justify-center"
       >
         {/* Contained and Responsive Image */}
-        <div className="relative mx-auto w-[70vh] md:w-[210vh] h-[80vh] md:h-[70vh]">
+        <div className="px-4 relative mx-auto w-[70vh] md:w-[210vh] h-[80vh] md:h-[70vh]">
           <Image
             src={landingImage}
             alt="Roofing Company Image"
