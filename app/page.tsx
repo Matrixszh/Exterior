@@ -2,9 +2,12 @@
 import React from "react";
 import Image from "next/image";
 import landingImage from "../public/roofing5.webp";
+import landingImage2 from "../public/consult.png";
 import { useRouter } from "next/navigation";
 import { AboutUs } from "@/components/AboutUs";
 import { Services } from "@/components/Services";
+import { Portfolio } from "@/components/Portfolio";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
 
 const Page = () => {
   const router = useRouter();
@@ -52,6 +55,48 @@ const Page = () => {
       </section>
       <section className="overflow-hidden">
         <Services/>
+      </section>
+      <section className="overflow-hidden">
+        <Portfolio/>
+      </section>
+      <section
+        id="Home"
+        className="relative py-14 mt-16 flex flex-col justify-center overflow-hidden"
+      >
+        {/* Contained and Responsive Image */}
+        <div className="relative mx-auto w-[70vh] md:w-[210vh] h-[40vh] md:h-[40vh] overflow-hidden">
+          <Image
+            src={landingImage2}
+            alt="Roofing Company Image"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            className="z-0"
+          />
+          {/* Overlay for darkening the image */}
+          <div className="absolute inset-0 bg-black opacity-40"></div>
+        </div>
+
+        {/* Text content over the image */}
+        <div className=" absolute top-0 left-10 h-full flex flex-col  justify-center z-10 px-8 md:px-12 text-white max-w-[600px]">
+          <p className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight">
+          Book your Consultation Now
+          </p>
+          <p className="text-md md:text-xl lg:text-xl font-normal mt-4 max-w-3xl">
+          Consult us to change your home into a better one
+          </p>
+          <div className="flex flex-col mt-6">
+            <button
+              className="border border-transparent px-8 py-3 rounded-md text-lg font-medium bg-[#FF8B00] text-white hover:bg-[transparent] hover:border-[#FF8B00] hover:text-white transition duration-300"
+              onClick={() => router.push("#contact")}
+            >
+              Book Free Consultations
+            </button>
+          </div>
+        </div>
+      </section>
+      <section className="overflow-hidden">
+        <WhyChooseUs/>
       </section>
     </main>
   );
