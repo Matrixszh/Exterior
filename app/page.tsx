@@ -12,10 +12,10 @@ const Page = () => {
     <main className="mt-12 sm:mt-[100px] md:mt-[120px] lg:mt-[80px]">
       <section
         id="Home"
-        className="relative w-full flex flex-col justify-center"
+        className="relative  flex flex-col justify-center overflow-hidden"
       >
         {/* Contained and Responsive Image */}
-        <div className="px-4 relative mx-auto w-[70vh] md:w-[210vh] h-[80vh] md:h-[70vh]">
+        <div className="relative mx-auto w-[70vh] md:w-[210vh] h-[80vh] md:h-[70vh] overflow-hidden">
           <Image
             src={landingImage}
             alt="Roofing Company Image"
@@ -47,10 +47,10 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section className="overflow-hidden">
         <AboutUs/>
       </section>
-      <section>
+      <section className="overflow-hidden">
         <Services/>
       </section>
     </main>
