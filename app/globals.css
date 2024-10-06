@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom styles for slick dots */
+.slick-dots li button:before {
+    color: #004692 !important; /* Set dot color to blue */
+    font-size: 12px; /* Adjust the size of the dots */
+  }
+  
+  /* Change the color of the active dot */
+  .slick-dots li.slick-active button:before {
+    color: #004692 !important; /* Active dot color */
+  }
+  
