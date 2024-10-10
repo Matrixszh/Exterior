@@ -12,6 +12,8 @@ export const WhyChooseUs = () => {
     speed: 500,
     slidesToShow: 1, // Show 1 card at a time on mobile
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1024, // Show carousel on screens smaller than 1024px
@@ -20,6 +22,8 @@ export const WhyChooseUs = () => {
           slidesToScroll: 1,
           infinite: true,
           dots: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
         },
       },
     ],
@@ -37,9 +41,9 @@ export const WhyChooseUs = () => {
       </div>
 
       {/* Desktop Version (3 Cards in a Row) */}
-      <div className="hidden md:flex w-full justify-center gap-8 px-4 md:px-16">
+      <div className="hidden md:flex w-full justify-center  gap-8 px-4 md:px-16">
         {/* Card 1 */}
-        <div className="w-full md:w-1/3 bg-[#004692] p-10 rounded-md text-center text-white h-[400px]">
+        <div className="w-full  md:w-1/3 bg-[#004692] p-10 rounded-md text-center text-white h-[400px] shadow-3xl shadow-black">
           <div className="mb-6">
             <div className="bg-[#FF8B00] rounded-full p-4 inline-block">
               <FaShieldAlt size={40} />

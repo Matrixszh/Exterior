@@ -3,7 +3,8 @@ import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "emailjs-com";
-// import "dotenv/config";
+import Image from 'next/image';
+import landingImage2 from "../public/from.webp";
 
 type FormFields = {
   name: string;
@@ -11,13 +12,16 @@ type FormFields = {
   email: string;
   description: string;
 };
+
 const AppointmentForm = () => {
   const template = process.env.NEXT_PUBLIC_TEMPLATE_ID;
   const service = process.env.NEXT_PUBLIC_SERVICE_ID;
   const key = process.env.NEXT_PUBLIC_USER_ID;
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
   const {
     register,
     handleSubmit,
@@ -48,22 +52,40 @@ const AppointmentForm = () => {
 
   return (
     <>
-      <form
-        className="flex flex-col w-[90%] mx-auto space-y-4"
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <input
-          {...register("name", { required: "Name is required" })}
-          type="text"
-          placeholder="Name"
-          className=" p-2 border"
-        />
-        {errors.name && (
-          <div className="text-red-500">{errors.name.message}</div>
-        )}
+      <div className="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0 md:space-x-8">
+        {/* Image Section */}
+        <div className=" relative w-full md:w-1/2 h-[98vh]">
+          <Image
+            src={landingImage2}
+            alt="Construction Image"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            className="px-14 py-4 rounded-lg"
+          />
+        </div>
 
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-          <div className="flex-1">
+        {/* Form Section */}
+        <div className="w-full md:w-1/2 h-[100vh] p-4 md:p-8 bg-white">
+          <h2 className="text-orange-500 font-semibold">Contact</h2>
+          <h1 className="text-3xl font-bold">Contact us Now</h1>
+          <p className="text-gray-500 mb-6">
+            Contact us for further details and queries
+          </p>
+          <form
+            className="space-y-12"
+            onSubmit={handleSubmit(onSubmit)}
+          >
+            <input
+              {...register("name", { required: "Name is required" })}
+              type="text"
+              placeholder="Name"
+              className="w-full p-3 border rounded-lg"
+            />
+            {errors.name && (
+              <div className="text-red-500">{errors.name.message}</div>
+            )}
+
             <input
               {...register("email", {
                 required: "Email is required",
@@ -74,14 +96,12 @@ const AppointmentForm = () => {
               })}
               type="text"
               placeholder="Email"
-              className=" p-2 border w-full"
+              className="w-full p-3 border rounded-lg"
             />
             {errors.email && (
               <div className="text-red-500">{errors.email.message}</div>
             )}
-          </div>
 
-          <div className="flex-1">
             <input
               {...register("number", {
                 required: "Phone number is required",
@@ -91,35 +111,39 @@ const AppointmentForm = () => {
                 },
               })}
               type="text"
-              placeholder="Number"
-              className=" p-2 border w-full"
+              placeholder="Phone Number"
+              className="w-full p-3 border rounded-lg"
             />
             {errors.number && (
               <div className="text-red-500">{errors.number.message}</div>
             )}
-          </div>
+
+            <textarea
+              {...register("description", {
+                required: "Description is required",
+                minLength: {
+                  value: 5,
+                  message: "Description must be at least 5 characters long",
+                },
+              })}
+              placeholder="Message"
+              className="w-full p-3 border rounded-lg"
+              rows={4}
+            />
+            {errors.description && (
+              <div className="text-red-500">{errors.description.message}</div>
+            )}
+
+            <button
+              type="submit"
+              className="w-full bg-orange-500 text-white p-3 rounded-lg hover:bg-white hover:text-orange-500 border border-orange-500 transition duration-300"
+            >
+              Contact Us
+            </button>
+          </form>
+          <ToastContainer />
         </div>
-
-        <textarea
-          {...register("description", {
-            required: "Description is required",
-            minLength: {
-              value: 5,
-              message: "Description must be at least 5 characters long",
-            },
-          })}
-          placeholder="Description"
-          className=" p-2 border"
-          rows={4}
-        />
-        {errors.description && (
-          <div className="text-red-500">{errors.description.message}</div>
-        )}
-
-        <button type="submit" className="w-full bg-[#D72323] text-white p-2 ">
-          Contact Us
-        </button>
-      </form>
+      </div>
     </>
   );
 };
