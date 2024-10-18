@@ -10,6 +10,7 @@ import { Portfolio } from "@/components/Portfolio";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import AppointmentForm from "@/components/AppointmentForm";
 import { Footer } from "@/components/Footer";
+import { Certification } from "@/components/certification";
 
 const Page = () => {
   const router = useRouter();
@@ -54,6 +55,9 @@ const Page = () => {
       </section>
       <section className="overflow-hidden">
         <AboutUs/>
+      </section>
+      <section className="overflow-hidden">
+        <Certification/>
       </section>
       <section className="overflow-hidden">
         <Services/>

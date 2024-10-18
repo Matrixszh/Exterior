@@ -3,7 +3,7 @@ import Slider from "react-slick"; // For the carousel
 import "slick-carousel/slick/slick.css"; // Slick carousel styles
 import "slick-carousel/slick/slick-theme.css"; // Slick carousel theme
 import { FaShieldAlt, FaTools, FaStream } from "react-icons/fa"; // Importing FontAwesome Icons
-
+ 
 export const WhyChooseUs = () => {
   // Carousel settings for mobile
   const settings = {
@@ -43,7 +43,7 @@ export const WhyChooseUs = () => {
       {/* Desktop Version (3 Cards in a Row) */}
       <div className="hidden md:flex w-full justify-center  gap-8 px-4 md:px-16">
         {/* Card 1 */}
-        <div className="w-full  md:w-1/3 bg-[#004692] p-10 rounded-md text-center text-white h-[400px] shadow-3xl shadow-black">
+        <div className="w-full  md:w-1/3 bg-[#004692] p-10 rounded-md text-center text-white h-[400px]">
           <div className="mb-6">
             <div className="bg-[#FF8B00] rounded-full p-4 inline-block">
               <FaShieldAlt size={40} />
@@ -80,13 +80,27 @@ export const WhyChooseUs = () => {
             With over 20 years of experience, we offer unparalleled service.
           </p>
         </div>
-      </div>
-
+      
+      {/* Card 3 */}
+      <div className="w-full md:w-1/3 bg-[#004692] p-10 rounded-md text-center text-white h-[400px]">
+          <div className="mb-6">
+            <div className="bg-[#FF8B00] rounded-full p-4 inline-block">
+              <FaTools size={40} />
+            </div>
+          </div>
+          <h3 className="text-2xl font-bold mb-4">Experienced</h3>
+          <p>
+            With over 20 years of experience, we offer unparalleled service.
+          </p>
+        </div>
+        </div>
+      
+      
       {/* Mobile Version (Carousel) */}
-      <div className="md:hidden w-full px-4">
+      <div className="md:hidden w-full px-8">
         <Slider {...settings}>
           {/* Card 1 */}
-          <div className="w-full bg-[#004692] p-10 rounded-md text-center text-white h-[400px]">
+          <div className="w-[90%] bg-[#004692] p-10  rounded-md text-center text-white h-[400px]">
             <div className="mb-6">
               <div className="bg-[#FF8B00] rounded-full p-4 inline-block">
                 <FaShieldAlt size={40} />
@@ -110,7 +124,18 @@ export const WhyChooseUs = () => {
               We offer an arsenal of services all under one roof. You don't need to go anywhere, we do it all.
             </p>
           </div>
-
+            {/* Card 2 */}
+          <div className="w-full bg-[#004692] p-10 rounded-md text-center text-white h-[400px]">
+            <div className="mb-6">
+              <div className="bg-[#FF8B00] rounded-full p-4 inline-block">
+                <FaStream size={40} />
+              </div>
+            </div>
+            <h3 className="text-2xl font-bold mb-4">Variety</h3>
+            <p>
+              We offer an arsenal of services all under one roof. You don't need to go anywhere, we do it all.
+            </p>
+          </div>
           {/* Card 3 */}
           <div className="w-full bg-[#004692] p-10 rounded-md text-center text-white h-[400px]">
             <div className="mb-6">
