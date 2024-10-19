@@ -81,7 +81,7 @@ export const Material = () => {
               className="rounded-lg shadow-black shadow-lg object-contain"
             />
           </div>
-          <p className="text-white mt-4">Material 1 Title</p>
+          <p className="text-white mt-4">James Hardie</p>
         </div>
         <div className="flex flex-col items-center">
           <div className="bg-[#FF8B00] rounded-lg w-full flex justify-center items-center aspect-square p-6">
@@ -93,7 +93,7 @@ export const Material = () => {
               className="rounded-lg shadow-black shadow-lg object-contain"
             />
           </div>
-          <p className="text-white mt-4">Material 2 Title</p>
+          <p className="text-white mt-4">CertainTeed</p>
         </div>
         <div className="flex flex-col items-center">
           <div className="bg-[#FF8B00] rounded-lg w-full flex justify-center items-center aspect-square p-6">
@@ -105,7 +105,7 @@ export const Material = () => {
               className="rounded-lg shadow-black shadow-lg object-contain"
             />
           </div>
-          <p className="text-white mt-4">Material 3 Title</p>
+          <p className="text-white mt-4">Atlas</p>
         </div>
       </div>
     </div>
