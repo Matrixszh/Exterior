@@ -10,8 +10,8 @@ import { Portfolio } from "@/components/Portfolio";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import AppointmentForm from "@/components/AppointmentForm";
 import { Footer } from "@/components/Footer";
-import { Certification } from "@/components/Certification";
 import { Material } from "@/components/Materials";
+import { Certification } from "@/components/Certification";
 
 const Page = () => {
   const router = useRouter();
