@@ -7,7 +7,7 @@ export const Certification = () => {
     <div className="bg-[#004692] flex flex-col items-center justify-center mt-12 md:mt-16 px-4 md:px-12">
       {/* Title Section */}
       <div className="text-center mt-4 mb-6 md:mb-12">
-        <p className="text-[#FF8B00] text-sm md:text-base">Certification</p>
+        <p className="text-[#FF8B00] text-sm md:text-base">Certifications</p>
         <h1 className="sm:block hidden text-white text-3xl md:text-5xl font-bold">We Are Certified</h1>
       </div>
 
