@@ -7,8 +7,8 @@ import { MdOutlinePhoneInTalk } from "react-icons/md";
 
 export const Footer = () => {
   return (
-    <footer className="bg-white rounded-lg  m-4 pt-12">
-      <div className="w-full  mx-auto p-4 md:py-8">
+    <footer className="bg-white rounded-lg  p-4">
+      <div className="w-full  mx-auto ">
         <div className="flex flex-col items-center justify-between md:flex-row gap-4 md:gap-0">
           <Link href="/" passHref>
             <div className="inline-block">

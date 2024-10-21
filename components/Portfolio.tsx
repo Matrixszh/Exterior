@@ -36,50 +36,29 @@ export const Portfolio = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-between gap-[10vh]">
+    <div className="flex flex-col items-center justify-between gap-[10vh] p-4 ">
       {/* First Section - Text and Button */}
-      <div className="flex w-full flex-col md:flex-row mt-8 gap-8 px-4 md:px-16">
-        {/* Text content */}
-        <div className="md:w-1/2 w-full md:text-left text-center">
-          <p className="text-[#FF8B00] text-lg mb-4">Our Portfolio</p>
-          <h2 className="text-4xl md:text-5xl font-semibold mb-4">
-            Browse Our Portfolio Of Previous Work
-          </h2>
-          <p className="text-md md:text-lg ">
-            We have served a plethora of satisfied customers, our work speaks volumes of credibility.
-          </p>
-        </div>
-
-        {/* Button at the bottom-right on desktop */}
-        <div className="md:w-1/2 w-full hidden sm:block flex flex-col justify-end relative">
-          <button
-            className="border border-transparent px-14 py-2 rounded-md text-md font-medium bg-[#FF8B00] text-white hover:bg-white hover:text-[#FF8B00] hover:border-[#FF8B00] transition duration-300 absolute bottom-0 right-0 mb-4 mr-4"
-            onClick={() => router.push("#contact")}
-          >
-            View More Work
-          </button>
-        </div>
-      </div>
+     
 
       {/* Second Section - Carousel */}
-      <div className="w-full md:px-10 px-4 ">
+      <div className="w-full  py-4">
         <Slider {...settings}>
-          <div className="px-2">
+          <div className="md:px-2">
             <div className="w-full h-[300px]"> {/* Set a fixed width and height for images */}
               <Image src={project1} alt="projects" className="w-full h-full object-cover" />
             </div>
           </div>
-          <div className="px-2">
+          <div className="md:px-2">
             <div className="w-full h-[300px]">
               <Image src={project2} alt="projects" className="w-full h-full object-cover" />
             </div>
           </div>
-          <div className="px-2">
+          <div className="md:px-2">
             <div className="w-full h-[300px]">
               <Image src={project3} alt="projects" className="w-full h-full object-cover" />
             </div>
           </div>
-          <div className="px-2">
+          <div className="md:px-2">
             <div className="w-full h-[300px]">
               <Image src={project2} alt="projects" className="w-full h-full object-cover" />
             </div>

@@ -3,7 +3,31 @@ import Slider from "react-slick"; // For the carousel
 import "slick-carousel/slick/slick.css"; // Slick carousel styles
 import "slick-carousel/slick/slick-theme.css"; // Slick carousel theme
 import { FaShieldAlt, FaTools, FaStream } from "react-icons/fa"; // Importing FontAwesome Icons
- 
+
+// Array containing the data for the cards
+const cardData = [
+  {
+    id: 1,
+    icon: <FaShieldAlt size={40} />,
+    title: "Certified Professionals",
+    description:
+      "Our company adheres to all OSHA regulations and is certified by all important companies.",
+  },
+  {
+    id: 2,
+    icon: <FaStream size={40} />,
+    title: "Variety",
+    description:
+      "We offer an arsenal of services all under one roof. You don't need to go anywhere, we do it all.",
+  },
+  {
+    id: 3,
+    icon: <FaTools size={40} />,
+    title: "Experienced",
+    description: "With over 20 years of experience, we offer unparalleled service.",
+  },
+];
+
 export const WhyChooseUs = () => {
   // Carousel settings for mobile
   const settings = {
@@ -29,129 +53,34 @@ export const WhyChooseUs = () => {
     ],
   };
 
+  // Reusable card component
+  const Card = ({ icon, title, description }:{icon:any,title:string,description:string}) => (
+    <div className="w-full bg-[#004692] p-10 rounded-md text-center text-white h-[400px] flex flex-col items-center justify-start gap-6">
+      <div className="bg-[#FF8B00] rounded-full p-4 inline-block">
+        {icon}
+      </div>
+      <h3 className="text-2xl font-bold">{title}</h3>
+      <p>{description}</p>
+    </div>
+  );
+
   return (
-    <div className="w-full py-10 flex flex-col items-center">
-      {/* Section Header */}
-      <div className="text-center mb-8">
-        <p className="text-[#FF8B00] text-lg mb-2">Choose Us</p>
-        <h2 className="text-4xl font-semibold mb-4">Why Choose Us</h2>
-        <p className="text-md md:text-lg">
-          What we offer is unparalleled and uncompromised work. Know us and work with us.
-        </p>
+    <div className="w-full py-10 flex flex-col items-center ">
+      {/* Desktop Version (3 Cards in a Row) */}
+      <div className="hidden md:flex w-full justify-center gap-8 px-4 md:p-4">
+        {cardData.map((card) => (
+          <Card key={card.id} icon={card.icon} title={card.title} description={card.description} />
+        ))}
       </div>
 
-      {/* Desktop Version (3 Cards in a Row) */}
-      <div className="hidden md:flex w-full justify-center  gap-8 px-4 md:px-16">
-        {/* Card 1 */}
-        <div className="w-full  md:w-1/3 bg-[#004692] p-10 rounded-md text-center text-white h-[400px]">
-          <div className="mb-6">
-            <div className="bg-[#FF8B00] rounded-full p-4 inline-block">
-              <FaShieldAlt size={40} />
-            </div>
-          </div>
-          <h3 className="text-2xl font-bold mb-4">Certified Professionals</h3>
-          <p>
-            Our company adheres to all OSHA regulations and is certified by all important companies.
-          </p>
-        </div>
-
-        {/* Card 2 */}
-        <div className="w-full md:w-1/3 bg-[#004692] p-10 rounded-md text-center text-white h-[400px]">
-          <div className="mb-6">
-            <div className="bg-[#FF8B00] rounded-full p-4 inline-block">
-              <FaStream size={40} />
-            </div>
-          </div>
-          <h3 className="text-2xl font-bold mb-4">Variety</h3>
-          <p>
-            We offer an arsenal of services all under one roof. You don't need to go anywhere, we do it all.
-          </p>
-        </div>
-
-        {/* Card 3 */}
-        <div className="w-full md:w-1/3 bg-[#004692] p-10 rounded-md text-center text-white h-[400px]">
-          <div className="mb-6">
-            <div className="bg-[#FF8B00] rounded-full p-4 inline-block">
-              <FaTools size={40} />
-            </div>
-          </div>
-          <h3 className="text-2xl font-bold mb-4">Experienced</h3>
-          <p>
-            With over 20 years of experience, we offer unparalleled service.
-          </p>
-        </div>
-      
-      {/* Card 3 */}
-      <div className="w-full md:w-1/3 bg-[#004692] p-10 rounded-md text-center text-white h-[400px]">
-          <div className="mb-6">
-            <div className="bg-[#FF8B00] rounded-full p-4 inline-block">
-              <FaTools size={40} />
-            </div>
-          </div>
-          <h3 className="text-2xl font-bold mb-4">Experienced</h3>
-          <p>
-            With over 20 years of experience, we offer unparalleled service.
-          </p>
-        </div>
-        </div>
-      
-      
       {/* Mobile Version (Carousel) */}
-      <div className="md:hidden w-full px-8">
+      <div className="md:hidden w-full px-4 flex flex-col justify-center gap-8">
         <Slider {...settings}>
-          {/* Card 1 */}
-          <div className="w-[90%] bg-[#004692] p-10  rounded-md text-center text-white h-[400px]">
-            <div className="mb-6">
-              <div className="bg-[#FF8B00] rounded-full p-4 inline-block">
-                <FaShieldAlt size={40} />
-              </div>
-            </div>
-            <h3 className="text-2xl font-bold mb-4">Certified Professionals</h3>
-            <p>
-              Our company adheres to all OSHA regulations and is certified by all important companies.
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div className="w-full bg-[#004692] p-10 rounded-md text-center text-white h-[400px]">
-            <div className="mb-6">
-              <div className="bg-[#FF8B00] rounded-full p-4 inline-block">
-                <FaStream size={40} />
-              </div>
-            </div>
-            <h3 className="text-2xl font-bold mb-4">Variety</h3>
-            <p>
-              We offer an arsenal of services all under one roof. You don't need to go anywhere, we do it all.
-            </p>
-          </div>
-            {/* Card 2 */}
-          <div className="w-full bg-[#004692] p-10 rounded-md text-center text-white h-[400px]">
-            <div className="mb-6">
-              <div className="bg-[#FF8B00] rounded-full p-4 inline-block">
-                <FaStream size={40} />
-              </div>
-            </div>
-            <h3 className="text-2xl font-bold mb-4">Variety</h3>
-            <p>
-              We offer an arsenal of services all under one roof. You don't need to go anywhere, we do it all.
-            </p>
-          </div>
-          {/* Card 3 */}
-          <div className="w-full bg-[#004692] p-10 rounded-md text-center text-white h-[400px]">
-            <div className="mb-6">
-              <div className="bg-[#FF8B00] rounded-full p-4 inline-block">
-                <FaTools size={40} />
-              </div>
-            </div>
-            <h3 className="text-2xl font-bold mb-4">Experienced</h3>
-            <p>
-              With over 20 years of experience, we offer unparalleled service.
-            </p>
-          </div>
+          {cardData.map((card) => (
+            <Card key={card.id} icon={card.icon} title={card.title} description={card.description} />
+          ))}
         </Slider>
       </div>
     </div>
   );
 };
-
-

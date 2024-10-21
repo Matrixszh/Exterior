@@ -52,28 +52,25 @@ const AppointmentForm = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0 md:space-x-8">
+      <div className="flex flex-col md:flex-row justify-between items-start  md:space-y-0 md:space-x-8">
         {/* Image Section */}
-        <div className=" relative w-full md:w-1/2 h-[98vh]">
+        <div className=" relative w-full md:w-1/2 md:h-[90vh] p-4">
           <Image
             src={landingImage2}
             alt="Construction Image"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            className="px-14 py-4 rounded-lg"
+            className="rounded-lg object-cover object-center md:h-[84vh] h-[60vh]"
           />
         </div>
 
         {/* Form Section */}
-        <div className="w-full md:w-1/2 h-[100vh] p-4 md:p-8 bg-white">
+        <div className="w-full md:w-1/2  p-4  bg-white">
           <h2 className="text-orange-500 font-semibold">Contact</h2>
           <h1 className="text-3xl font-bold">Contact us Now</h1>
           <p className="text-gray-500 mb-6">
             Contact us for further details and queries
           </p>
           <form
-            className="space-y-12"
+            className="space-y-6"
             onSubmit={handleSubmit(onSubmit)}
           >
             <input
