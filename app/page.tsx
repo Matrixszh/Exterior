@@ -11,7 +11,7 @@ import { WhyChooseUs } from "@/components/WhyChooseUs";
 import AppointmentForm from "@/components/AppointmentForm";
 import { Footer } from "@/components/Footer";
 import { Material } from "@/components/Materials";
-import { Certification } from "@/components/Certification";
+import { Certification } from "@/components/certification";
 
 const Page = () => {
   const router = useRouter();

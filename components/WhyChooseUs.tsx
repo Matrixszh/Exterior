@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick"; // For the carousel
 import "slick-carousel/slick/slick.css"; // Slick carousel styles
 import "slick-carousel/slick/slick-theme.css"; // Slick carousel theme
-import { FaShieldAlt, FaTools, FaStream } from "react-icons/fa"; // Importing FontAwesome Icons
+import { FaShieldAlt, FaTools, FaStream, FaFileInvoiceDollar } from "react-icons/fa"; // Importing FontAwesome Icons
 
 // Array containing the data for the cards
 const cardData = [
@@ -26,18 +26,26 @@ const cardData = [
     title: "Experienced",
     description: "With over 20 years of experience, we offer unparalleled service.",
   },
+  {
+    id: 4,
+    icon: <FaFileInvoiceDollar size={40} />,
+    title: "Insurance Claims",
+    description:
+      "We can help you, if you suffered any damage during a weather catastrophe, make use of your insurance claim to improve your home.",
+  },
 ];
 
 export const WhyChooseUs = () => {
   // Carousel settings for mobile
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: true, // Allows endless loop
     speed: 500,
     slidesToShow: 1, // Show 1 card at a time on mobile
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    autoplay: true, // Enables automatic scrolling
+    autoplaySpeed: 2000, // Speed of auto-play in milliseconds
+    pauseOnHover: false, // Carousel will not pause when hovered
     responsive: [
       {
         breakpoint: 1024, // Show carousel on screens smaller than 1024px
@@ -54,11 +62,9 @@ export const WhyChooseUs = () => {
   };
 
   // Reusable card component
-  const Card = ({ icon, title, description }:{icon:any,title:string,description:string}) => (
+  const Card = ({ icon, title, description }: { icon: any; title: string; description: string }) => (
     <div className="w-full bg-[#004692] p-10 rounded-md text-center text-white h-[400px] flex flex-col items-center justify-start gap-6">
-      <div className="bg-[#FF8B00] rounded-full p-4 inline-block">
-        {icon}
-      </div>
+      <div className="bg-[#FF8B00] rounded-full p-4 inline-block">{icon}</div>
       <h3 className="text-2xl font-bold">{title}</h3>
       <p>{description}</p>
     </div>
@@ -84,3 +90,4 @@ export const WhyChooseUs = () => {
     </div>
   );
 };
+
