@@ -1,8 +1,9 @@
 import React from "react";
 import { useRouter } from "next/navigation";
-import project1 from "../public/roofing5.webp";
-import project2 from "../public/roofing5.webp";
-import project3 from "../public/roofing7.jpg";
+import project1 from "../public/portfolio.webp";
+import project2 from "../public/portfolio2.webp";
+import project3 from "../public/portfolio3.webp";
+import project4 from "../public/roofing5.webp";
 import Image from "next/image";
 import Slider from "react-slick"; // Importing the react-slick carousel
 import "slick-carousel/slick/slick.css"; // Importing slick carousel styles
@@ -60,21 +61,12 @@ export const Portfolio = () => {
           </div>
           <div className="md:px-2">
             <div className="w-full h-[300px]">
-              <Image src={project2} alt="projects" className="w-full h-full object-cover" />
+              <Image src={project4} alt="projects" className="w-full h-full object-cover" />
             </div>
           </div>
         </Slider>
       </div>
-
-      {/* Button below the carousel on mobile */}
-      <div className="w-full flex justify-center mt-2 md:hidden">
-        <button
-          className="border border-transparent px-14 py-2 rounded-md text-md font-medium bg-[#FF8B00] text-white hover:bg-white hover:text-[#FF8B00] hover:border-[#FF8B00] transition duration-300"
-          onClick={() => router.push("#contact")}
-        >
-          View More Work
-        </button>
-      </div>
+      
 
      
     </div>

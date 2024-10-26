@@ -54,7 +54,7 @@ export const Services = () => {
         >
           {data.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="w-full flex items-center justify-center h-[300px]">
+              <div className="w-full flex items-center justify-center h-[75vh]">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -68,9 +68,9 @@ export const Services = () => {
           ))}
         </Swiper>
       </div>
-      <div className="flex flex-col gap-[6vh] w-1/2">
+      <div className="flex flex-col gap-[6vh] w-full md:w-1/2">
         {data.map((item, index) => (
-          <div className="flex items-start gap-4" key={index}>
+          <div className="flex items-start justify-evenly gap-[6vh]" key={index}>
             <button className="border-2 border-[#808080] text-[#808080] rounded-full p-1 flex items-center justify-center font-bold hover:bg-[#FF8B00] hover:text-white hover:border-[#FF8B00] transition duration-300">
               {index + 1}
             </button>

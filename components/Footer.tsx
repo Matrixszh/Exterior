@@ -20,41 +20,23 @@ export const Footer = () => {
               />
             </div>
           </Link>
-
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-            <li>
-              <a href="#about" className="hover:underline me-4 md:me-6">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                Companies
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">
-                Pricing
-              </a>
-            </li>
-          </ul>
         </div>
         <div className="flex  items-center justify-center gap-8">
           <div className="flex flex-col justify-between gap-4">
-            <Link href="mailto:info@ghaffarenterprises ">
-              <IoMailOutline className="text-[#D72323] md:text-3xl text-2xl animate-pulse" />
+            <Link href="mailto:acosta2535@gmail.com ">
+              <IoMailOutline className="text-orange-500 md:text-3xl text-2xl animate-pulse" />
             </Link>
             <Link href="tel:+1 (630) 526-4000">
-              <MdOutlinePhoneInTalk className="text-[#D72323] md:text-3xl text-2xl animate-pulse" />
+              <MdOutlinePhoneInTalk className="text-orange-500 md:text-3xl text-2xl animate-pulse" />
             </Link>
           </div>
           <div className="flex flex-col justify-between gap-4">
             <Link
-              href="mailto:info@ghaffarenterprises "
+              href="mailto:acosta2535@gmail.com "
               className="md:text-xl text-md"
             >
               {" "}
-              info@ghaffarenterprises.com
+              acosta2535@gmail.com
             </Link>
             <Link href="tel:+1 (630) 526-4000" className="md:text-xl text-md">
               {" "}
@@ -66,7 +48,7 @@ export const Footer = () => {
         <span className="block text-sm text-gray-500 text-center justify-center dark:text-gray-400">
           © 2024{" "}
           <a href="/" className="hover:underline">
-            Elite Spaces™
+            Acosta Exteriors™
           </a>
           . All Rights Reserved.
         </span>
