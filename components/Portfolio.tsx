@@ -16,7 +16,7 @@ export const Portfolio = () => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Show 3 images at once in desktop view
+    slidesToShow: 4, // Show 3 images at once in desktop view
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -45,23 +45,23 @@ export const Portfolio = () => {
       <div className="w-full  py-4">
         <Slider {...settings}>
           <div className="md:px-2">
-            <div className="w-full h-[300px]"> {/* Set a fixed width and height for images */}
-              <Image src={project1} alt="projects" className="w-full h-full object-cover" />
+            <div className="w-full h-[43vh]"> {/* Set a fixed width and height for images */}
+              <Image src={project1} alt="projects" className="w-full h-full " />
             </div>
           </div>
           <div className="md:px-2">
-            <div className="w-full h-[300px]">
-              <Image src={project2} alt="projects" className="w-full h-full object-cover" />
+            <div className="w-full h-[43vh]">
+              <Image src={project2} alt="projects" className="w-full h-full " />
             </div>
           </div>
           <div className="md:px-2">
-            <div className="w-full h-[300px]">
-              <Image src={project3} alt="projects" className="w-full h-full object-cover" />
+            <div className="w-full h-[43vh]">
+              <Image src={project3} alt="projects" className="w-full h-full " />
             </div>
           </div>
           <div className="md:px-2">
-            <div className="w-full h-[300px]">
-              <Image src={project4} alt="projects" className="w-full h-full object-cover" />
+            <div className="w-full h-[43vh]">
+              <Image src={project4} alt="projects" className="w-full h-full " />
             </div>
           </div>
         </Slider>

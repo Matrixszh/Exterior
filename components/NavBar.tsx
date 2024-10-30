@@ -98,10 +98,10 @@ const NavBar: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className=" flex-shrink-0 flex justify-between ">
+        <div className="  flex  justify-between lg:w-[220px] justify-end">
           {" "}
           {/* Adjust width as needed */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:block lg:ml-auto">
             <button
               className="border border-gray-300 px-6 py-2 rounded-md text-md font-medium bg-[#FF8B00] text-white font-bold hover:border-[#FF8B00] hover:bg-white hover:text-[#FF8B00] transition duration-300"
               onClick={() => scrollToSection("contact")}

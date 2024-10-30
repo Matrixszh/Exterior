@@ -16,9 +16,8 @@ export const Certification = () => {
             <Image
               src={CertificationImage}
               alt="Certification"
-              layout="intrinsic"
-              objectFit="contain"
-              className="rounded-lg shadow-black shadow-lg"
+              
+              className="rounded-lg shadow-black shadow-lg object-contain"
             />
           </div>
         </div>

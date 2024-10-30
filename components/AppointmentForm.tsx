@@ -5,6 +5,8 @@ import "react-toastify/dist/ReactToastify.css";
 import emailjs from "emailjs-com";
 import Image from 'next/image';
 import landingImage2 from "../public/from.webp";
+import gsap from "gsap";
+import { useGSAP } from '@gsap/react';
 
 type FormFields = {
   name: string;
@@ -14,6 +16,35 @@ type FormFields = {
 };
 
 const AppointmentForm = () => {
+  useGSAP(() => {
+    
+    gsap.from("#form_title1", {
+      yPercent: 20,
+      duration: 0.8,
+      opacity: 0,
+      delay: 0.10,
+      scrollTrigger: {
+        trigger: "#form",
+        start: "top center",
+        end: "bottom center",
+        toggleActions: "play none none none",
+      }
+      })
+     gsap.from("#form_title2", {
+      yPercent: 20,
+      duration: 0.8,
+      opacity: 0,
+      delay: 0.35,
+      scrollTrigger: {
+        trigger: "#form",
+        start: "top center",
+        end: "bottom center",
+        toggleActions: "play none none none",
+        
+      }
+      })
+  })
+
   const template = process.env.NEXT_PUBLIC_TEMPLATE_ID;
   const service = process.env.NEXT_PUBLIC_SERVICE_ID;
   const key = process.env.NEXT_PUBLIC_USER_ID;
@@ -64,8 +95,8 @@ const AppointmentForm = () => {
 
         {/* Form Section */}
         <div className="w-full md:w-1/2  p-4  bg-white">
-          <h2 className="text-orange-500 font-semibold">Contact</h2>
-          <h1 className="text-3xl font-bold">Contact us Now</h1>
+          <h2 className="text-orange-500 font-semibold" id="form_title1">Contact</h2>
+          <h1 className="text-3xl font-bold" id="form_title2">Contact us Now</h1>
           <p className="text-gray-500 mb-6">
             Contact us for further details and queries
           </p>

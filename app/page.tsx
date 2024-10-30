@@ -12,8 +12,193 @@ import AppointmentForm from "@/components/AppointmentForm";
 import { Footer } from "@/components/Footer";
 import { Material } from "@/components/Materials";
 import { Certification } from "@/components/certification";
+import gsap from "gsap";
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
 
 const Page = () => {
+  const tl = gsap.timeline();
+  useGSAP(() => {
+    tl.from("#intro_title", {
+      yPercent: 50,
+      duration: 0.8,
+      opacity: 0,
+      delay:0.5
+    })
+      .from("#intro_content", {
+        yPercent: 50,
+        duration: 0.8,
+        opacity: 0,
+        delay:0
+      })
+      .from("#intro_button", {
+        yPercent: 50,
+        duration: 0.8,
+        opacity: 0,
+        delay:0
+    })
+    
+      gsap.from("#certification_title1", {
+       yPercent: 20,
+       duration: 0.8,
+       opacity: 0,
+       delay: 0.10,
+       scrollTrigger: {
+         trigger: "#certifications",
+         start: "top center",
+         end: "bottom center",
+         toggleActions: "play none none none",
+         
+       }
+       })
+      gsap.from("#certification_title2", {
+       yPercent: 20,
+       duration: 0.8,
+       opacity: 0,
+       delay: 0.35,
+       scrollTrigger: {
+         trigger: "#certifications",
+         start: "top center",
+         end: "bottom center",
+         toggleActions: "play none none none",
+         
+       }
+      })
+    
+      gsap.from("#service_title1", {
+       yPercent: 20,
+       duration: 0.8,
+       opacity: 0,
+       delay: 0.10,
+       scrollTrigger: {
+         trigger: "#services",
+         start: "top center",
+         end: "bottom center",
+         toggleActions: "play none none none",
+         
+       }
+       })
+      gsap.from("#service_title2", {
+       yPercent: 20,
+       duration: 0.8,
+       opacity: 0,
+       delay: 0.35,
+       scrollTrigger: {
+         trigger: "#services",
+         start: "top center",
+         end: "bottom center",
+         toggleActions: "play none none none",
+         
+       }
+      })
+    
+      gsap.from("#portfolio_title1", {
+       yPercent: 20,
+       duration: 0.8,
+       opacity: 0,
+       delay: 0.10,
+       scrollTrigger: {
+         trigger: "#portfolio",
+         start: "top center",
+         end: "bottom center",
+         toggleActions: "play none none none",
+         
+       }
+       })
+      gsap.from("#portfolio_title2", {
+       yPercent: 20,
+       duration: 0.8,
+       opacity: 0,
+       delay: 0.35,
+       scrollTrigger: {
+         trigger: "#portfolio",
+         start: "top center",
+         end: "bottom center",
+         toggleActions: "play none none none",
+         
+       }
+      })
+    
+      gsap.from("#materials_title1", {
+       yPercent: 20,
+       duration: 0.8,
+       opacity: 0,
+       delay: 0.10,
+       scrollTrigger: {
+         trigger: "#materials",
+         start: "top center",
+         end: "bottom center",
+         toggleActions: "play none none none",
+         
+       }
+       })
+      gsap.from("#materials_title2", {
+       yPercent: 20,
+       duration: 0.8,
+       opacity: 0,
+       delay: 0.35,
+       scrollTrigger: {
+         trigger: "#materials",
+         start: "top center",
+         end: "bottom center",
+         toggleActions: "play none none none",
+         
+       }
+       })
+      gsap.from("#consultation_title1", {
+       yPercent: 20,
+       duration: 0.8,
+       opacity: 0,
+       delay: 0.10,
+       scrollTrigger: {
+         trigger: "#consultation",
+         start: "top center",
+         end: "bottom center",
+         toggleActions: "play none none none",
+         
+       }
+       })
+      gsap.from("#consultation_title2", {
+       yPercent: 20,
+       duration: 0.8,
+       opacity: 0,
+       delay: 0.35,
+       scrollTrigger: {
+         trigger: "#consultation",
+         start: "top center",
+         end: "bottom center",
+         toggleActions: "play none none none",
+         
+       }
+       })
+      gsap.from("#choose_title1", {
+       yPercent: 20,
+       duration: 0.8,
+       opacity: 0,
+       delay: 0.10,
+       scrollTrigger: {
+         trigger: "#choose",
+         start: "top center",
+         end: "bottom center",
+         toggleActions: "play none none none",
+         
+       }
+       })
+      gsap.from("#choose_title2", {
+       yPercent: 20,
+       duration: 0.8,
+       opacity: 0,
+       delay: 0.35,
+       scrollTrigger: {
+         trigger: "#choose",
+         start: "top center",
+         end: "bottom center",
+         toggleActions: "play none none none",
+         
+       }
+       })
+     
+  })
   const router = useRouter();
   return (
     <main className="mt-0 ">
@@ -26,7 +211,7 @@ const Page = () => {
           <Image
             src={landingImage}
             alt="Roofing Company Image"
-           fill
+            fill
             className=""
           />
           {/* Overlay for darkening the image */}
@@ -35,14 +220,14 @@ const Page = () => {
 
         {/* Text content over the image */}
         <div className=" absolute  h-full flex flex-col  justify-center z-10 px-8 md:px-12 text-white md:max-w-[80vw] gap-8 md:gap-8">
-          <p className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          <p className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" id="intro_title">
             Roofing, Siding & Window Company
           </p>
-          <p className="text-md md:text-xl lg:text-xl font-normal mt-4 max-w-3xl">
+          <p className="text-md md:text-xl lg:text-xl font-normal mt-4 max-w-3xl" id="intro_content">
             At Acosta Exteriors, we offer a variety of services to the Chicagoland area
             with 20 plus years of experience and hands-on in the construction business.
           </p>
-          <div className="mt-6">
+          <div className="mt-6" id="intro_button">
             <button
               className="border border-transparent px-8 py-3 rounded-md text-lg font-medium bg-[#FF8B00] text-white hover:bg-[transparent] hover:border-[#FF8B00] hover:text-white transition duration-300"
               onClick={() => router.push("#contact")}
@@ -52,31 +237,31 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="overflow-hidden md:mt-12 mt-10 min-h-screen">
+      <section className="overflow-hidden md:mt-12 mt-10 min-h-screen" id="about">
         <AboutUs/>
       </section>
-      <section className="overflow-hidden bg-[#004692] min-h-screen">
+      <section className="overflow-hidden bg-[#004692] min-h-screen" id="certifications">
       <div className="text-center md:mt-12 mt-10 flex items-center justify-center flex-col gap-3">
-        <p className="text-[#FF8B00] text-3xl md:text-xm">Certifications</p>
-        <h1 className="sm:block hidden text-white text-3xl md:text-5xl font-bold">We Are Certified</h1>
+        <p className="text-[#FF8B00] text-3xl md:text-xm" id="certification_title1">Certifications</p>
+        <h1 className="sm:block hidden text-white text-3xl md:text-5xl font-bold" id="certification_title2">We Are Certified</h1>
       </div>
         <Certification/>
       </section>
 
-      <section className="overflow-hidden min-h-screen">
+      <section className="overflow-hidden min-h-screen" id="services">
         <div className="flex flex-col items-center justify-center mt-10 md:mt-12 gap-3">
-          <p className=" md:text-left sm:text-center text-[#FF8B00] md:text-xm text-3xl">Our Services</p>
-          <h2 className="px-14 hidden sm:block text-4xl md:text-5xl font-normal ">We Provide The Best Services</h2>
+          <p className=" md:text-left sm:text-center text-[#FF8B00] md:text-xm text-3xl" id="service_title1">Our Services</p>
+          <h2 className="px-14 hidden sm:block text-4xl md:text-5xl font-normal " id="service_title2">We Provide The Best Services</h2>
         </div>
         <Services/>
       </section>
 
-      <section className="overflow-hidden ">
+      <section className="overflow-hidden " id="portfolio">
       <div className="flex w-full flex-col md:flex-row mt-10 md:mt-12 gap-3 p-4">
         {/* Text content */}
         <div className="md:w-1/2 w-full md:text-left text-center flex flex-col gap-3">
-          <p className="text-[#FF8B00] text-lg mb-4">Our Portfolio</p>
-          <h2 className="text-3xl md:text-5xl font-semibold">
+          <p className="text-[#FF8B00] text-lg mb-4" id="portfolio_title1">Our Portfolio</p>
+          <h2 className="text-3xl md:text-5xl font-semibold" id="portfolio_title2">
             Browse Our Portfolio Of Previous Work
           </h2>
           <p className="text-md md:text-lg ">
@@ -96,16 +281,16 @@ const Page = () => {
       </div>
         <Portfolio/>
       </section>
-      <section className="overflow-hidden bg-[#004692] mt-10 md:mt-12  ">
+      <section className="overflow-hidden bg-[#004692] mt-10 md:mt-12  " id="materials">
       <div className="text-center mt-10 md:mt-12 flex flex-col gap-3">
-        <p className="text-[#FF8B00] text-sm md:text-base">Materials</p>
-        <h1 className="text-white text-3xl md:text-5xl font-bold">Materials We Use</h1>
+        <p className="text-[#FF8B00] text-sm md:text-base" id="materials_title1">Materials</p>
+        <h1 className="text-white text-3xl md:text-5xl font-bold" id="materials_title2">Materials We Use</h1>
       </div>
 
         <Material/>
       </section>
       <section
-        id="Home"
+        id="consultation"
         className="relative  flex flex-col justify-center overflow-hidden md:mt-12 mt-10 "
       >
         {/* Contained and Responsive Image */}
@@ -122,10 +307,10 @@ const Page = () => {
 
         {/* Text content over the image */}
         <div className=" absolute top-0 left-0 h-full flex flex-col  justify-center z-10 p-4 md:px-12 text-white max-w-[600px] gap-3">
-          <p className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight">
+          <p className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight" id="consultation_title1">
           Book your Consultation Now
           </p>
-          <p className="text-md md:text-xl lg:text-xl font-normal mt-4 ">
+          <p className="text-md md:text-xl lg:text-xl font-normal mt-4 " id="consultation_title2">
           Consult us to change your home into a better one
           </p>
           <div className="flex flex-col mt-6">
@@ -138,17 +323,17 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="overflow-hidden">
+      <section className="overflow-hidden" id="choose">
       <div className="text-center md:mt-12 mt-10">
-        <p className="text-[#FF8B00] text-lg mb-2">Choose Us</p>
-        <h2 className="text-4xl font-semibold mb-4">Why Choose Us</h2>
+        <p className="text-[#FF8B00] text-lg mb-2" id="choose_title1">Choose Us</p>
+        <h2 className="text-4xl font-semibold mb-4" id="choose_title2">Why Choose Us</h2>
         <p className="text-md md:text-lg">
           What we offer is unparalleled and uncompromised work. Know us and work with us.
         </p>
       </div>
         <WhyChooseUs/>
       </section>
-      <section className="overflow-hidden min-h-screen">
+      <section className="overflow-hidden min-h-screen" id="form">
         <AppointmentForm/>
       </section>
       <section className="overflow-hidden md:mt-10 mt-12">

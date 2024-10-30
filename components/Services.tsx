@@ -54,14 +54,14 @@ export const Services = () => {
         >
           {data.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="w-full flex items-center justify-center h-[75vh]">
+              <div className="w-full flex items-center justify-center md:h-[75vh] h-[60vh]">
                 <Image
                   src={item.image}
                   alt={item.title}
-                  layout="responsive"
+                  // layout="responsive"
                   width={800}
                   height={600}
-                  className="object-cover w-full h-full"
+                  className="lg:object-contain w-full h-full"
                 />
               </div>
             </SwiperSlide>
@@ -70,7 +70,7 @@ export const Services = () => {
       </div>
       <div className="flex flex-col gap-[6vh] w-full md:w-1/2">
         {data.map((item, index) => (
-          <div className="flex items-start justify-evenly gap-[6vh]" key={index}>
+          <div className="flex items-start  gap-[1vw] " key={index}>
             <button className="border-2 border-[#808080] text-[#808080] rounded-full p-1 flex items-center justify-center font-bold hover:bg-[#FF8B00] hover:text-white hover:border-[#FF8B00] transition duration-300">
               {index + 1}
             </button>

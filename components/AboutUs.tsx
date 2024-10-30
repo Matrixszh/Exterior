@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Aboutus from "../public/Frame 6.png";
@@ -7,9 +8,44 @@ import { useRouter } from "next/navigation";
 import Slider from "react-slick"; // Importing the react-slick carousel
 import "slick-carousel/slick/slick.css"; // Import slick styles
 import "slick-carousel/slick/slick-theme.css"; // Import slick theme
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 export const AboutUs = () => {
   const router = useRouter();
+  const tl = gsap.timeline();
+
+  useGSAP(() => {
+   gsap.from("#about_us", {
+    yPercent: 20,
+    duration: 0.8,
+    opacity: 0,
+    delay: 0.10,
+    scrollTrigger: {
+      trigger: "#about",
+      start: "top center",
+      end: "bottom center",
+      toggleActions: "play none none none",
+      
+    }
+    })
+   gsap.from("#aboutus_Title", {
+    yPercent: 20,
+    duration: 0.8,
+    opacity: 0,
+    delay: 0.10,
+    scrollTrigger: {
+      trigger: "#about",
+      start: "top center",
+      end: "bottom center",
+      toggleActions: "play none none none",
+      
+    }
+    })
+  })
 
   // Settings for react-slick carousel
   const carouselSettings = {
@@ -25,7 +61,7 @@ export const AboutUs = () => {
   return (
     <div className="flex md:flex-row flex-col items-center justify-center  gap-8 md:gap-8 p-4">
       {/* About Us text for mobile */}
-      <p className="text-[#FF8B00] md:block flex flex-col p-1 text-center block md:hidden text-3xl">
+      <p className="text-[#FF8B00] md:block flex flex-col p-1 text-center block md:hidden text-3xl" id="about_us">
         ABOUT US
       </p>
 
@@ -73,11 +109,11 @@ export const AboutUs = () => {
       {/* <div className="w-full  flex flex-col gap-12 items-center justify-center h-" >
         
       </div> */}
-      <div className="flex flex-col md:gap-4 gap-6 pt-6 md:pt-0   w-full ">
-          <p className="hidden text-[#FF8B00] md:block flex flex-col ">
+      <div className="flex flex-col md:gap-4 gap-6 pt-6 md:pt-0   w-full " >
+          <p className="hidden text-[#FF8B00] md:block flex flex-col " id="about_us">
             About us
           </p>
-          <p className="text-3xl md:text-5xl">
+          <p className="text-3xl md:text-5xl" id="aboutus_Title">
           A Family Business
           </p>
           <p className="text-md md:text-lg">
