@@ -10,7 +10,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://acostaexteriors.com/"),
+  metadataBase: new URL("https://exterior-seven.vercel.app/"),
   title: "Acosta Exteriors",
   description:
     "Elevate your brand with Scriptify, where creativity meets connection! I craft compelling stories and engaging posts designed to spark conversations and build a thriving community around your brand.",
