@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://acostaexteriors.com/logo.png", // Absolute URL with new domain
-        width: 1200,
-        height: 630,
+        width: 800,
+        height: 430,
         alt: "Acosta Exteriors",
       },
     ],
