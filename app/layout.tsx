@@ -1,8 +1,8 @@
 import NavBar from "@/components/NavBar";
 import type { Metadata } from "next";
-// import localFont from "next/font/local";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+
 const roboto = Roboto({
   weight: ["100", "400", "500", "700", "900"],
   display: "swap",
@@ -10,31 +10,25 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://exterior-seven.vercel.app/"),
+  metadataBase: new URL("https://acostaexteriors.com/"), // Updated domain
   title: "Acosta Exteriors",
-  description:
-    "Elevate your brand with Scriptify, where creativity meets connection! I craft compelling stories and engaging posts designed to spark conversations and build a thriving community around your brand.",
   openGraph: {
     title: "Acosta Exteriors",
-    description:
-      "Elevate your brand with Scriptify, where creativity meets connection! I craft compelling stories and engaging posts designed to spark conversations and build a thriving community around your brand.",
     images: [
       {
-        url: "/logo.png",
+        url: "https://acostaexteriors.com/logo.png", // Absolute URL with new domain
         width: 1200,
         height: 630,
         alt: "Acosta Exteriors",
       },
     ],
     type: "website",
-    url: "/logo.png",
+    url: "https://acostaexteriors.com/", // New domain
   },
   twitter: {
     card: "summary_large_image",
     title: "Acosta Exteriors",
-    description:
-      "Elevate your brand with Scriptify, where creativity meets connection! I craft compelling stories and engaging posts designed to spark conversations and build a thriving community around your brand.",
-    images: ["/logo.png"],
+    images: ["https://acostaexteriors.com/logo.png"], // Absolute URL for Twitter
   },
 };
 
