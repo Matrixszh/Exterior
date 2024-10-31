@@ -21,7 +21,7 @@ export const Certification = () => {
             />
           </div>
         </div>
-        <h1 className="md:hidden text-white text-3xl md:text-5xl font-bold">We Are Certified</h1>
+       
         {/* Text Content */}
         <div className="w-full md:w-[50%] flex flex-col justify-center gap-2 md:gap-10 ">
           <p className="text-white text-center text-lg md:text-2xl leading-normal pb-2">
