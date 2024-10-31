@@ -230,7 +230,7 @@ const Page = () => {
           <div className="mt-6" id="intro_button">
             <button
               className="border border-transparent px-8 py-3 rounded-md text-lg font-medium bg-[#FF8B00] text-white hover:bg-[transparent] hover:border-[#FF8B00] hover:text-white transition duration-300"
-              onClick={() => router.push("#contact")}
+              onClick={() => router.push("#form")}
             >
               Book Free Consultations
             </button>
@@ -273,7 +273,7 @@ const Page = () => {
         <div className="md:w-1/2 w-full hidden sm:block flex flex-col justify-end relative">
           <button
             className="border border-transparent px-14 py-2 rounded-md text-md font-medium bg-[#FF8B00] text-white hover:bg-white hover:text-[#FF8B00] hover:border-[#FF8B00] transition duration-300 absolute bottom-0 right-0 mb-4 mr-4"
-            onClick={() => router.push("#contact")}
+            onClick={() => router.push("#form")}
           >
             View More Work
           </button>
@@ -316,7 +316,7 @@ const Page = () => {
           <div className="flex flex-col mt-6">
             <button
               className="border border-transparent px-8 py-3 rounded-md text-lg font-medium bg-[#FF8B00] text-white hover:bg-[transparent] hover:border-[#FF8B00] hover:text-white transition duration-300"
-              onClick={() => router.push("#contact")}
+              onClick={() => router.push("#form")}
             >
               Book Free Consultations
             </button>

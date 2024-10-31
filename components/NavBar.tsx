@@ -14,11 +14,9 @@ const NavBar: React.FC = () => {
   const menuItemsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   const items = [
-    { item: "SERVICES", id: "home" },
-    { item: "ABOUT", id: "companies" },
-    { item: "GALLERY", id: "contact" },
-    { item: "TESTIMONIALS", id: "contact" },
-    { item: "CONTACT", id: "contact" },
+    { item: "SERVICES", id: "services" },
+    { item: "ABOUT", id: "about" },
+    { item: "CONTACT", id: "form" },
   ];
 
   const toggleMenu = (targetSectionId?: string) => {
@@ -104,7 +102,7 @@ const NavBar: React.FC = () => {
           <div className="hidden lg:block lg:ml-auto">
             <button
               className="border border-gray-300 px-6 py-2 rounded-md text-md font-medium bg-[#FF8B00] text-white font-bold hover:border-[#FF8B00] hover:bg-white hover:text-[#FF8B00] transition duration-300"
-              onClick={() => scrollToSection("contact")}
+              onClick={() => scrollToSection("form")}
             >
               Book Call
             </button>
@@ -164,7 +162,7 @@ const NavBar: React.FC = () => {
           <div className="p-4">
             <button
               className="w-full bg-[#FF8B00] border border-gray-300 py-3 rounded-xl text-lg font-medium text-white font-bold hover:border-[#FF8B00] hover:bg-white hover:text-[#FF8B00] transition duration-300"
-              onClick={() => toggleMenu("contact")}
+              onClick={() => toggleMenu("form")}
             >
               Contact
             </button>

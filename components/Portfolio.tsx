@@ -2,8 +2,8 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import project1 from "../public/portfolio.webp";
 import project2 from "../public/portfolio2.webp";
-import project3 from "../public/portfolio3.webp";
-import project4 from "../public/roofing5.webp";
+import project3 from "../public/portfolio4.jpg";
+import project4 from "../public/portfolio5.jpg";
 import Image from "next/image";
 import Slider from "react-slick"; // Importing the react-slick carousel
 import "slick-carousel/slick/slick.css"; // Importing slick carousel styles
