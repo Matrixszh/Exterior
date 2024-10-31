@@ -8,41 +8,33 @@ const roboto = Roboto({
   display: "swap",
   subsets: ["latin"],
 });
-const baseUrl = "https://acostaexteriors.com/";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL("https://acostaexteriors.com/"),
   title: "Acosta Exteriors",
+  description:
+    "Elevate your brand with Scriptify, where creativity meets connection! I craft compelling stories and engaging posts designed to spark conversations and build a thriving community around your brand.",
   openGraph: {
     title: "Acosta Exteriors",
+    description:
+      "Elevate your brand with Scriptify, where creativity meets connection! I craft compelling stories and engaging posts designed to spark conversations and build a thriving community around your brand.",
     images: [
       {
-        url: new URL("/logo.png", baseUrl).toString(),
-        width: 1200,
-        height: 1200,
-        alt: "Acosta Exteriors Square Logo",
-      },
-      {
-        url: new URL("/logo.png", baseUrl).toString(),
+        url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Acosta Exteriors Rectangle Logo",
+        alt: "Acosta Exteriors",
       },
     ],
     type: "website",
-    url: baseUrl,
+    url: "/logo.png",
   },
   twitter: {
     card: "summary_large_image",
     title: "Acosta Exteriors",
-    images: [
-      {
-        url: new URL("/logo.png", baseUrl).toString(),
-        width: 1200,
-        height: 1200,
-        alt: "Acosta Exteriors Square Logo",
-      },
-    ],
+    description:
+      "Elevate your brand with Scriptify, where creativity meets connection! I craft compelling stories and engaging posts designed to spark conversations and build a thriving community around your brand.",
+    images: ["/logo.png"],
   },
 };
 
