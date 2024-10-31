@@ -48,7 +48,6 @@ const Page = () => {
          start: "top center",
          end: "bottom center",
          toggleActions: "play none none none",
-         
        }
        })
       gsap.from("#certification_title2", {
@@ -61,7 +60,6 @@ const Page = () => {
          start: "top center",
          end: "bottom center",
          toggleActions: "play none none none",
-         
        }
       })
     
@@ -75,7 +73,6 @@ const Page = () => {
          start: "top center",
          end: "bottom center",
          toggleActions: "play none none none",
-         
        }
        })
       gsap.from("#service_title2", {
@@ -88,7 +85,6 @@ const Page = () => {
          start: "top center",
          end: "bottom center",
          toggleActions: "play none none none",
-         
        }
       })
     
@@ -102,7 +98,6 @@ const Page = () => {
          start: "top center",
          end: "bottom center",
          toggleActions: "play none none none",
-         
        }
        })
       gsap.from("#portfolio_title2", {
@@ -115,7 +110,6 @@ const Page = () => {
          start: "top center",
          end: "bottom center",
          toggleActions: "play none none none",
-         
        }
       })
     
@@ -129,7 +123,6 @@ const Page = () => {
          start: "top center",
          end: "bottom center",
          toggleActions: "play none none none",
-         
        }
        })
       gsap.from("#materials_title2", {
@@ -142,7 +135,6 @@ const Page = () => {
          start: "top center",
          end: "bottom center",
          toggleActions: "play none none none",
-         
        }
        })
       gsap.from("#consultation_title1", {
@@ -155,7 +147,6 @@ const Page = () => {
          start: "top center",
          end: "bottom center",
          toggleActions: "play none none none",
-         
        }
        })
       gsap.from("#consultation_title2", {
@@ -168,7 +159,6 @@ const Page = () => {
          start: "top center",
          end: "bottom center",
          toggleActions: "play none none none",
-         
        }
        })
       gsap.from("#choose_title1", {
@@ -181,7 +171,6 @@ const Page = () => {
          start: "top center",
          end: "bottom center",
          toggleActions: "play none none none",
-         
        }
        })
       gsap.from("#choose_title2", {
@@ -194,10 +183,8 @@ const Page = () => {
          start: "top center",
          end: "bottom center",
          toggleActions: "play none none none",
-         
        }
        })
-     
   })
   const router = useRouter();
   return (
@@ -206,7 +193,6 @@ const Page = () => {
         id="Home"
         className="md:min-h-screen relative  flex flex-col justify-center overflow-hidden "
       >
-        {/* Contained and Responsive Image */}
         <div className="relative w-screen md:h-screen h-[70vh] overflow-hidden">
           <Image
             src={landingImage}
@@ -214,11 +200,9 @@ const Page = () => {
             fill
             className=""
           />
-          {/* Overlay for darkening the image */}
           <div className="absolute inset-0 bg-black opacity-40"></div>
         </div>
 
-        {/* Text content over the image */}
         <div className=" absolute  h-full flex flex-col  justify-center z-10 px-8 md:px-12 text-white md:max-w-[80vw] gap-8 md:gap-8">
           <p className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" id="intro_title">
             Roofing, Siding & Window Company
@@ -242,34 +226,31 @@ const Page = () => {
       </section>
       <section className="overflow-hidden bg-[#004692] min-h-screen" id="certifications">
       <div className="text-center md:mt-12 mt-10 flex items-center justify-center flex-col gap-3">
-        <p className="text-[#FF8B00] text-3xl md:text-xm" id="certification_title1">Certifications</p>
-        <h1 className="sm:block hidden text-white text-3xl md:text-5xl font-bold" id="certification_title2">We Are Certified</h1>
+        <p className="text-[#FF8B00] text-lg" id="certification_title1">Certifications</p>
+        <h1 className="text-3xl md:text-5xl font-semibold text-white" id="certification_title2">We Are Certified</h1>
       </div>
         <Certification/>
       </section>
 
       <section className="overflow-hidden min-h-screen" id="services">
         <div className="flex flex-col items-center justify-center mt-10 md:mt-12 gap-3">
-          <p className=" md:text-left sm:text-center text-[#FF8B00] md:text-xm text-3xl" id="service_title1">Our Services</p>
-          <h2 className="px-14 hidden sm:block text-4xl md:text-5xl font-normal " id="service_title2">We Provide The Best Services</h2>
+          <p className="text-[#FF8B00] text-lg" id="service_title1">Our Services</p>
+          <h2 className="px-14 text-3xl md:text-5xl font-semibold" id="service_title2">We Provide The Best Services</h2>
         </div>
         <Services/>
       </section>
 
       <section className="overflow-hidden " id="portfolio">
       <div className="flex w-full flex-col md:flex-row mt-10 md:mt-12 gap-3 p-4">
-        {/* Text content */}
         <div className="md:w-1/2 w-full md:text-left text-center flex flex-col gap-3">
-          <p className="text-[#FF8B00] text-lg mb-4" id="portfolio_title1">Our Portfolio</p>
+          <p className="text-[#FF8B00] text-lg" id="portfolio_title1">Our Portfolio</p>
           <h2 className="text-3xl md:text-5xl font-semibold" id="portfolio_title2">
             Browse Our Portfolio Of Previous Work
           </h2>
-          <p className="text-md md:text-lg ">
+          <p className="text-md md:text-lg">
             We have served a plethora of satisfied customers, our work speaks volumes of credibility.
           </p>
         </div>
-
-        {/* Button at the bottom-right on desktop */}
         <div className="md:w-1/2 w-full hidden sm:block flex flex-col justify-end relative">
           <button
             className="border border-transparent px-14 py-2 rounded-md text-md font-medium bg-[#FF8B00] text-white hover:bg-white hover:text-[#FF8B00] hover:border-[#FF8B00] transition duration-300 absolute bottom-0 right-0 mb-4 mr-4"
@@ -281,19 +262,19 @@ const Page = () => {
       </div>
         <Portfolio/>
       </section>
-      <section className="overflow-hidden bg-[#004692] mt-10 md:mt-12  " id="materials">
-      <div className="text-center mt-10 md:mt-12 flex flex-col gap-3">
-        <p className="text-[#FF8B00] text-sm md:text-base" id="materials_title1">Materials</p>
-        <h1 className="text-white text-3xl md:text-5xl font-bold" id="materials_title2">Materials We Use</h1>
-      </div>
 
+      <section className="overflow-hidden bg-[#004692] mt-10 md:mt-12" id="materials">
+      <div className="text-center mt-10 md:mt-12 flex flex-col gap-3">
+        <p className="text-[#FF8B00] text-lg" id="materials_title1">Materials</p>
+        <h1 className="text-3xl md:text-5xl font-semibold text-white" id="materials_title2">Materials We Use</h1>
+      </div>
         <Material/>
       </section>
+
       <section
         id="consultation"
         className="relative  flex flex-col justify-center overflow-hidden md:mt-12 mt-10 "
       >
-        {/* Contained and Responsive Image */}
         <div className="relative mx-auto w-screen h-[60vh]">
           <Image
             src={landingImage2}
@@ -301,18 +282,16 @@ const Page = () => {
            fill
             className="z-0 object-cover object-center"
           />
-          {/* Overlay for darkening the image */}
           <div className="absolute inset-0 bg-black opacity-40"></div>
         </div>
 
-        {/* Text content over the image */}
         <div className=" absolute top-0 left-0 h-full flex flex-col  justify-center z-10 p-4 md:px-12 text-white max-w-[600px] gap-3">
-          <p className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight" id="consultation_title1">
+          <p className="text-[#FF8B00] text-lg" id="consultation_title1">
           Book your Consultation Now
           </p>
-          <p className="text-md md:text-xl lg:text-xl font-normal mt-4 " id="consultation_title2">
+          <h2 className="text-3xl md:text-5xl font-semibold text-white" id="consultation_title2">
           Consult us to change your home into a better one
-          </p>
+          </h2>
           <div className="flex flex-col mt-6">
             <button
               className="border border-transparent px-8 py-3 rounded-md text-lg font-medium bg-[#FF8B00] text-white hover:bg-[transparent] hover:border-[#FF8B00] hover:text-white transition duration-300"
@@ -323,19 +302,22 @@ const Page = () => {
           </div>
         </div>
       </section>
+
       <section className="overflow-hidden" id="choose">
       <div className="text-center md:mt-12 mt-10">
-        <p className="text-[#FF8B00] text-lg mb-2" id="choose_title1">Choose Us</p>
-        <h2 className="text-4xl font-semibold mb-4" id="choose_title2">Why Choose Us</h2>
+        <p className="text-[#FF8B00] text-lg" id="choose_title1">Choose Us</p>
+        <h2 className="text-3xl md:text-5xl font-semibold" id="choose_title2">Why Choose Us</h2>
         <p className="text-md md:text-lg">
           What we offer is unparalleled and uncompromised work. Know us and work with us.
         </p>
       </div>
         <WhyChooseUs/>
       </section>
+
       <section className="overflow-hidden min-h-screen" id="form">
         <AppointmentForm/>
       </section>
+
       <section className="overflow-hidden md:mt-10 mt-12">
         <Footer/>
       </section>
