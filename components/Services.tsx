@@ -32,7 +32,7 @@ export const Services = () => {
       title: "Windows",
       content:
         "We also provide expert window installation and replacement, enhancing energy efficiency, security, and aesthetic appeal.",
-      image: "/windows.webp",
+      image: "/portfolio7.jpg",
     },
   ];
 
